@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-class AppDimension{
+
+class AppDimension {
   static double myDeviceWidth = 390;
   static double myDeviceHeight = 844;
-  static width(double p,BuildContext context)
-  {
-    return MediaQuery.of(context).size.width/(myDeviceWidth/p );
+  static width(double requiredWidth, BuildContext context) {
+    return MediaQuery.of(context).size.width / (myDeviceWidth / requiredWidth);
   }
-  static height(double p,BuildContext context)
-  {
-    return MediaQuery.of(context).size.height/(myDeviceHeight/p);
+
+  static height(double requiredHeight, BuildContext context) {
+    return MediaQuery.of(context).size.height /
+        (myDeviceHeight / requiredHeight);
   }
 }
-
-
