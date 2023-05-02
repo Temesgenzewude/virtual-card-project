@@ -1,8 +1,16 @@
-import 'package:flutter/material.dart';
+import 'dart:ui';
+
 import 'package:get/get.dart';
-import 'package:virtual_card_project/presentation/widgets/gift_card_widgets/GiftCard.dart';
-import 'package:virtual_card_project/presentation/latest_gifts_pages/latest_gifts_page.dart';
-import 'package:virtual_card_project/presentation/shoa_gifts_pages/shoa_gifts_pages.dart';
+
+import 'package:flutter/material.dart';
+
+import 'package:virtual_card_project/presentation/pay_bills.dart';
+import 'package:virtual_card_project/presentation/send_gift_pages/camera_page.dart';
+import 'package:virtual_card_project/presentation/send_gift_pages/gift_sent_alert_box.dart';
+import 'package:virtual_card_project/presentation/send_gift_pages/send_gift.dart';
+import 'package:virtual_card_project/presentation/send_gift_pages/send_gift_with_moment.dart';
+import 'package:virtual_card_project/presentation/send_gift_pages/send_gift_with_moment_final.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -10,16 +18,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Gifts Card',
-      
-      home: LatestGiftsPage()
-
-
+     home:SendGiftsPage(),
     );
   }
 }

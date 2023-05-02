@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class AppDimension {
   static double myDeviceWidth = 390;
   static double myDeviceHeight = 844;
@@ -12,3 +13,4 @@ class AppDimension {
         (myDeviceHeight / requiredHeight);
   }
 }
+
