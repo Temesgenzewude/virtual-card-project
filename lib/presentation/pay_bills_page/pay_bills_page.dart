@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:virtual_card_project/routes/routes.dart';
 import 'package:virtual_card_project/utils/app_dimensions.dart';
 
 class PayBills extends StatefulWidget {
@@ -90,34 +92,44 @@ class _PayBillsState extends State<PayBills> {
                             fontWeight: FontWeight.w400,
                             color: Color(0xFF191919)),
                       ),
-                      Container(
-                        height: AppDimension.height(77, context),
-                        width: AppDimension.width(370, context),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                              AppDimension.height(5, context)),
-                          border: Border.all(
-                            color: Color(0xFFD7BD8C),
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(RouteHelper.getGiftCardPage());
+                        },
+                        child: Container(
+                          height: AppDimension.height(77, context),
+                          width: AppDimension.width(370, context),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                                AppDimension.height(5, context)),
+                            border: Border.all(
+                              color: Color(0xFFD7BD8C),
+                            ),
+                            color: Color(0xFFFBF6CC),
                           ),
-                          color: Color(0xFFFBF6CC),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              left: AppDimension.width(16, context),
-                              right: AppDimension.width(21, context)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Gift Cards',
-                                style: TextStyle(
-                                  fontSize: AppDimension.height(24, context),
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0xFF2F2E41),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                left: AppDimension.width(16, context),
+                                right: AppDimension.width(21, context)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Gift Cards',
+                                  style: TextStyle(
+                                    fontSize: AppDimension.height(24, context),
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xFF2F2E41),
+                                  ),
                                 ),
-                              ),
-                              Icon(Icons.card_giftcard_outlined,color: Color(0xFFD7BD8C),)
-                            ],
+                                SvgPicture.asset(
+                                  "assets/images/gift-outline-grey.svg",
+                                  fit: BoxFit.cover,
+                                  height: AppDimension.height(40, context),
+                                  width: AppDimension.height(40, context),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       )

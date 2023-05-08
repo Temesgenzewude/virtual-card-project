@@ -1,14 +1,15 @@
-
+import 'package:get/get.dart';
+import 'package:virtual_card_project/routes/routes.dart';
 import 'package:virtual_card_project/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class GiftCard extends StatefulWidget {
+class GiftCardPage extends StatefulWidget {
   @override
-  State<GiftCard> createState() => _GiftCard();
+  State<GiftCardPage> createState() => _GiftCard();
 }
 
-class _GiftCard extends State<GiftCard> {
+class _GiftCard extends State<GiftCardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,37 +18,53 @@ class _GiftCard extends State<GiftCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            
             padding: EdgeInsets.only(
-              left: AppDimension.width(20, context),
-              top: AppDimension.height(46, context),
-            ),
+                left: AppDimension.width(27, context),
+                top: AppDimension.height(46, context),
+                right: AppDimension.width(27, context)),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding:
-                      EdgeInsets.only(right: AppDimension.width(5, context)),
-                  child: GestureDetector(
-                      onTap: () {},
-                      child: Icon(Icons.chevron_left,
-                          size: AppDimension.height(40, context))),
+                Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(
+                          right: AppDimension.width(7, context)),
+                      child: GestureDetector(
+                          onTap: () {
+                            Get.back();
+                          },
+                          child: Icon(Icons.chevron_left,
+                              size: AppDimension.height(40, context))),
+                    ),
+                    Text(
+                      "Gift",
+                      style: TextStyle(
+                          fontSize: AppDimension.height(24, context),
+                          color: Color(0xFF143B58),
+                          fontFamily: "PoppinsMedium"),
+                    ),
+                    SizedBox(
+                      width: AppDimension.width(5, context),
+                    ),
+                    Text(
+                      "Cards",
+                      style: TextStyle(
+                          fontSize: AppDimension.height(24, context),
+                          color: Color(0xFFD3AF35),
+                          fontFamily: "PoppinsRegular"),
+                    ),
+                  ],
                 ),
-                Text(
-                  "Gift",
-                  style: TextStyle(
-                      fontSize: AppDimension.height(24, context),
-                      color: Color(0xFF143B58),
-                      fontFamily: "PoppinsMedium"),
-                ),
-                SizedBox(
-                  width: AppDimension.width(5, context),
-                ),
-                Text(
-                  "Cards",
-                  style: TextStyle(
-                      fontSize: AppDimension.height(24, context),
-                      color: Color(0xFFD3AF35),
-                      fontFamily: "PoppinsRegular"),
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed(RouteHelper.getLatestGiftsPage());
+                  },
+                  child: SvgPicture.asset(
+                    "assets/images/gift-outline.svg",
+                    height: AppDimension.height(30, context),
+                    width: AppDimension.height(30, context),
+                  ),
                 ),
               ],
             ),
@@ -90,8 +107,12 @@ class _GiftCard extends State<GiftCard> {
                                 ),
                               ),
                               GestureDetector(
+                                onTap: () {
+                                  Get.toNamed(
+                                      RouteHelper.getShoaGiftsValuePage());
+                                },
                                 child: GiftCardContainer(
-                                  amount: "23000.00",
+                                  amount: "4,500.00",
                                   giftvalue: 'Shoa Gift Value',
                                   img: Image.asset(
                                     "assets/images/shoa.png",
@@ -229,12 +250,22 @@ class _GiftCard extends State<GiftCard> {
                         "Latest Moments",
                         style: TextStyle(fontFamily: "PoppinsMedium"),
                       ),
-                      PostContainer(Day: '1 day ago', Likes: '489', Message: 'Happy Mothers Day', Name: 'Abebe Bikila', PostPic: Image.asset("assets/images/Post.png"), ProfilePic: Image.asset("assets/images/Profile.png")
-                      
-,),
-PostContainer(Day: '07 Feb 2023  11:20 PM', Likes: '1489', Message: 'Wishing you a hbd my little angel', Name: 'Chaltu James', PostPic: Image.asset("assets/images/Post2.png"), ProfilePic: Image.asset("assets/images/Profile.png")
-                      
-,),
+                      PostContainer(
+                        Day: '1 day ago',
+                        Likes: '489',
+                        Message: 'Happy Mothers Day',
+                        Name: 'Abebe Bikila',
+                        PostPic: Image.asset("assets/images/Post.png"),
+                        ProfilePic: Image.asset("assets/images/Profile.png"),
+                      ),
+                      PostContainer(
+                        Day: '07 Feb 2023  11:20 PM',
+                        Likes: '1489',
+                        Message: 'Wishing you a hbd my little angel',
+                        Name: 'Chaltu James',
+                        PostPic: Image.asset("assets/images/Post2.png"),
+                        ProfilePic: Image.asset("assets/images/Profile.png"),
+                      ),
                     ]),
               ),
             ),
@@ -494,20 +525,19 @@ class DraftGift extends StatelessWidget {
             img,
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              
               children: [
                 Row(
-                  
                   children: [
                     Text(
                       giftvalue,
                       style:
                           TextStyle(fontSize: AppDimension.height(20, context)),
                     ),
-                    
                     Padding(
-                      padding: EdgeInsets.only(left:AppDimension.width(150, context)),
-                      child: SvgPicture.asset("assets/images/pencil-square.svg"),
+                      padding: EdgeInsets.only(
+                          left: AppDimension.width(150, context)),
+                      child:
+                          SvgPicture.asset("assets/images/pencil-square.svg"),
                     ),
                   ],
                 ),
