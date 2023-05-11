@@ -31,22 +31,27 @@ class _SendGiftsPageState extends State<SendGiftsPage> {
         child: Column(
           children: [
             SizedBox(
-              height: AppDimension.height(44, context),
+              height: AppDimension.height(46, context),
             ),
             Container(
-              height: AppDimension.height(30, context),
+              // height: AppDimension.height(30, context),
               padding: EdgeInsets.only(
-                left: AppDimension.width(21, context),
+                left: AppDimension.width(27, context),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   GestureDetector(
-                    onTap: () => {},
+                    onTap: () {
+                      Get.back();
+                    },
                     child: Icon(
                       Icons.chevron_left,
-                      size: AppDimension.height(24, context),
+                      size: AppDimension.height(40, context),
                     ),
+                  ),
+                  SizedBox(
+                    width: AppDimension.width(5, context),
                   ),
                   RichText(
                     text: TextSpan(
@@ -55,15 +60,15 @@ class _SendGiftsPageState extends State<SendGiftsPage> {
                             text: 'Send',
                             style: TextStyle(
                               color: Color(0xFF191919),
-                              fontSize: AppDimension.height(20, context),
-                              fontWeight: FontWeight.w500,
+                              fontSize: AppDimension.height(24, context),
+                              fontFamily: "PoppinsMedium",
                             )),
                         TextSpan(
                             text: '  Gift',
                             style: TextStyle(
                               color: Color(0xFFD3AF35),
-                              fontSize: AppDimension.height(20, context),
-                              fontWeight: FontWeight.w400,
+                              fontSize: AppDimension.height(24, context),
+                              fontFamily: "PoppinsMedium",
                             )),
                       ],
                     ),
@@ -71,9 +76,9 @@ class _SendGiftsPageState extends State<SendGiftsPage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: AppDimension.height(14, context),
-            ),
+            // SizedBox(
+            //   height: AppDimension.height(14, context),
+            // ),
             Divider(
               thickness: AppDimension.width(1, context),
             ),
