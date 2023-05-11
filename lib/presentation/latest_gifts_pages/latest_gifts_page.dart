@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../utils/app_dimensions.dart';
 import '../widgets/shoa_and_latest_gifts_widgets/shoa_and_latest_gifts_page_card_widget.dart';
@@ -17,7 +17,7 @@ class LatestGiftsPage extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(
-              left: AppDimension.width(24, context),
+              left: AppDimension.width(27, context),
               top: AppDimension.height(46, context),
             ),
             child: Row(
@@ -26,18 +26,18 @@ class LatestGiftsPage extends StatelessWidget {
                   padding:
                       EdgeInsets.only(right: AppDimension.width(5, context)),
                   child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.back();
+                      },
                       child: Icon(Icons.chevron_left,
                           size: AppDimension.height(40, context))),
                 ),
-               
-               
                 Text(
                   "Gifts",
                   style: TextStyle(
                       fontSize: AppDimension.height(24, context),
                       color: const Color(0xFF191919),
-                      fontFamily: "PoppinsRegular"),
+                      fontFamily: "PoppinsMedium"),
                 ),
               ],
             ),
@@ -48,7 +48,6 @@ class LatestGiftsPage extends StatelessWidget {
           SizedBox(
             height: AppDimension.height(30, context),
           ),
-        
           Container(
             margin: EdgeInsets.only(
               left: AppDimension.width(27, context),
@@ -109,7 +108,7 @@ class LatestGiftsPage extends StatelessWidget {
               SizedBox(
                 height: AppDimension.height(20, context),
               ),
-               const ShoaAndLatestGiftsPageCardWidget(
+              const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "4,500.00",
                 image: "images/shoa_gift_images/loyality_card_logo.png",
@@ -136,7 +135,6 @@ class LatestGiftsPage extends StatelessWidget {
               ),
               SizedBox(
                 height: AppDimension.height(20, context),
-                
               ),
             ]),
           )),
