@@ -17,7 +17,7 @@ class LatestGiftsPage extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(
-              left: AppDimension.width(27, context),
+              left: AppDimension.width(20, context),
               top: AppDimension.height(46, context),
             ),
             child: Row(
@@ -69,7 +69,7 @@ class LatestGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "7,500.00",
-                image: "images/shoa_gift_images/shoa_gift_value.png",
+                image: "assets/images/shoa_gift_images/shoa_gift_value.png",
                 message: "Happy Birthday My Love!!!",
                 name: 'Aster Gadisa',
               ),
@@ -79,7 +79,7 @@ class LatestGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "3,000.00",
-                image: "images/shoa_gift_images/gift_card_logo.png",
+                image: "assets/images/shoa_gift_images/gift_card_logo.png",
                 message: "Merry Christmas My Love!",
                 name: 'Chaltu James',
                 isReceived: false,
@@ -90,7 +90,7 @@ class LatestGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "4,500.00",
-                image: "images/shoa_gift_images/loyality_card_logo.png",
+                image: "assets/images/shoa_gift_images/loyality_card_logo.png",
                 message: "Bon Voyage Brother!",
                 name: 'Abebe Bikila',
               ),
@@ -100,7 +100,7 @@ class LatestGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "2,000.00",
-                image: "images/shoa_gift_images/shoa_gift_value.png",
+                image: "assets/images/shoa_gift_images/shoa_gift_value.png",
                 message: "Happy Birthday My Love!!!",
                 name: 'Chaltu James',
                 isReceived: false,
@@ -111,14 +111,14 @@ class LatestGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "4,500.00",
-                image: "images/shoa_gift_images/loyality_card_logo.png",
+                image: "assets/images/shoa_gift_images/loyality_card_logo.png",
                 message: "Bon Voyage Brother!",
                 name: 'Abebe Bikila',
               ),
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "4,500.00",
-                image: "images/shoa_gift_images/gift_to_mam.png",
+                image: "assets/images/shoa_gift_images/gift_to_mam.png",
                 message: "Happy Birthday Mama!!!",
                 name: 'Abebe Bikila',
               ),
@@ -128,7 +128,7 @@ class LatestGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "2,000.00",
-                image: "images/shoa_gift_images/merry_xmas.png",
+                image: "assets/images/shoa_gift_images/merry_xmas.png",
                 message: "Merry Christmas My Love!",
                 name: 'Chaltu James',
                 isReceived: false,

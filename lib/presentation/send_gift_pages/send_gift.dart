@@ -36,7 +36,7 @@ class _SendGiftsPageState extends State<SendGiftsPage> {
             Container(
               // height: AppDimension.height(30, context),
               padding: EdgeInsets.only(
-                left: AppDimension.width(27, context),
+                left: AppDimension.width(20, context),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
