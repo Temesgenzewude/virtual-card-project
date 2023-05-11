@@ -19,9 +19,9 @@ class _GiftCard extends State<GiftCardPage> {
         children: [
           Padding(
             padding: EdgeInsets.only(
-                left: AppDimension.width(27, context),
+                left: AppDimension.width(20, context),
                 top: AppDimension.height(46, context),
-                right: AppDimension.width(27, context)),
+                right: AppDimension.width(20, context)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

@@ -19,7 +19,7 @@ class ShoaGiftsPage extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(
-              left: AppDimension.width(27, context),
+              left: AppDimension.width(20, context),
               top: AppDimension.height(46, context),
             ),
             child: Row(
@@ -115,7 +115,7 @@ class ShoaGiftsPage extends StatelessWidget {
                           child: const Image(
                             fit: BoxFit.cover,
                             image: AssetImage(
-                              "images/shoa_gift_images/shoa_gift_value.png",
+                              "assets/images/shoa_gift_images/shoa_gift_value.png",
                             ),
                           ),
                         ),
@@ -133,9 +133,9 @@ class ShoaGiftsPage extends StatelessWidget {
                                 fontSize: AppDimension.height(12, context),
                               ),
                             ),
-                            SizedBox(
-                              height: AppDimension.height(3, context),
-                            ),
+                            // SizedBox(
+                            //   height: AppDimension.height(3, context),
+                            // ),
                             Text(
                               "Gift Value",
                               style: TextStyle(
@@ -183,7 +183,7 @@ class ShoaGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "4,500.00",
-                image: "images/shoa_gift_images/gift_to_mam.png",
+                image: "assets/images/shoa_gift_images/gift_to_mam.png",
                 message: "Happy Birthday Mama!!!",
                 name: 'Abebe Bikila',
               ),
@@ -193,7 +193,7 @@ class ShoaGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "2,000.00",
-                image: "images/shoa_gift_images/merry_xmas.png",
+                image: "assets/images/shoa_gift_images/merry_xmas.png",
                 message: "Merry Christmas My Love!",
                 name: 'Chaltu James',
                 isReceived: false,
@@ -204,7 +204,7 @@ class ShoaGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "4,500.00",
-                image: "images/shoa_gift_images/gift_to_mam.png",
+                image: "assets/images/shoa_gift_images/gift_to_mam.png",
                 message: "Happy Birthday Mama!!!",
                 name: 'Abebe Bikila',
               ),
@@ -214,7 +214,7 @@ class ShoaGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "2,000.00",
-                image: "images/shoa_gift_images/merry_xmas.png",
+                image: "assets/images/shoa_gift_images/merry_xmas.png",
                 message: "Merry Christmas My Love!",
                 name: 'Chaltu James',
                 isReceived: false,
@@ -225,7 +225,7 @@ class ShoaGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "4,500.00",
-                image: "images/shoa_gift_images/gift_to_mam.png",
+                image: "assets/images/shoa_gift_images/gift_to_mam.png",
                 message: "Happy Birthday Mama!!!",
                 name: 'Abebe Bikila',
               ),
@@ -235,7 +235,7 @@ class ShoaGiftsPage extends StatelessWidget {
               const ShoaAndLatestGiftsPageCardWidget(
                 date: "24 March 2023 4:10PM",
                 giftAmount: "2,000.00",
-                image: "images/shoa_gift_images/merry_xmas.png",
+                image: "assets/images/shoa_gift_images/merry_xmas.png",
                 message: "Merry Christmas My Love!",
                 name: 'Chaltu James',
                 isReceived: false,
